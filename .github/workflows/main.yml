@@ -1,0 +1,27 @@
+name: A workflow the go-user-api
+on: push
+jobs:
+  build:
+    name: build the application
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: make build
+  lint:
+    name: lint the code
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: make lint
+  test:
+    name: test the application
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: make test
+  test-e2e:
+    name: test-e2e the application
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: test-e2e

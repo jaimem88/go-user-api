@@ -57,3 +57,5 @@ Both unit and e2e tests
 ```sh
     make run
 ```
+
+## GitHub Actions

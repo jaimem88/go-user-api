@@ -24,4 +24,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: test-e2e
+    - run: make test-e2e

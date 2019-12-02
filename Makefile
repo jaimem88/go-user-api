@@ -11,7 +11,7 @@ export GOLANG_IMAGE :=devlube/gobuilder:0.0.36-msp-go-1.13.4-alpine3.10
 export GOLANG_LINTER_IMAGE :=golangci/golangci-lint:v1.21.0
 
 export GOFLAGS:=-mod=vendor
-export E2E_TESTS_BIN := $(COMPONENT_NAME)_e2e_tests
+
 .PHONY: proto
 proto:
 	./pkg/proto/gen-go.sh
@@ -32,7 +32,7 @@ build:
 .PHONY: lint
 lint:
 	docker run --rm \
-		-v ${PWD}:/go \
+		-v ${PWD}:/go/src/app -w /go/src/app \
 		${GOLANG_LINTER_IMAGE} golangci-lint run ${GOLANG_LINTER_ARGS}
 
 .PHONY: test-all

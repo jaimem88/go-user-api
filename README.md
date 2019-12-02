@@ -58,4 +58,15 @@ Both unit and e2e tests
     make run
 ```
 
+## CI integration
+
+We use [buildkite](https://buildkite.com/) as our CI/CD tool, however the pipeline is only available to members of [AssemblyPayments](https://github.com/AssemblyPayments).
+A GitHub workflow action is available to be used as long as you fork the repository.
+
 ## GitHub Actions
+
+A workflow for GitHub actions is available under [.github/workflows](.github/workflows/main.yml).
+
+### The task
+
+Please see [TASK.md](TASK.md) for instructions on how to setup the project

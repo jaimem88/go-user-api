@@ -1,8 +1,10 @@
 # Go User API
 
-*DISCLAIMER*
+[![Build status](https://badge.buildkite.com/49a408b9fd43b6628a55e541f5f7a73e4e548c37c1e7fb0491.svg)](https://buildkite.com/assembly-payments/banking-be-hiring-go-user-api)
+
+## *DISCLAIMER*
+
 This is repository is used by Assembly's banking Backend team for hiring and evaluation purposes. Any functionality described in this repository does not entirely reflect or show how the actual implementation of some services is done.
-*end disclaimer*
 
 ## Service definition
 
@@ -26,8 +28,22 @@ A [Makefile](Makefile) is available with the following recipes defined
 
 ### Test
 
+Unit tests
+
 ```sh
     make test
+```
+
+End-to-end tests
+
+```sh
+    make test-e2e
+```
+
+Both unit and e2e tests
+
+```sh
+    make test-all
 ```
 
 ### Lint

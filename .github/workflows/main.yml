@@ -13,15 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: make lint
-  test:
-    name: test the application
+  coverage:
+    name: run unit and e2e tests and report coverage
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: make test
-  test-e2e:
-    name: test-e2e the application
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - run: make test-e2e
+    - run: make cov-all
+

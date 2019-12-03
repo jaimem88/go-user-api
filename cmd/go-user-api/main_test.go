@@ -25,7 +25,8 @@ func TestMain(t *testing.T) {
 		args []string
 	)
 
-	for _, arg := range os.Args {
+	for k, arg := range os.Args {
+		fmt.Printf("arg:%d - %s\n\n", k, arg)
 		switch {
 		case strings.HasPrefix(arg, "DEVEL"):
 		case strings.HasPrefix(arg, "-test"):
@@ -38,7 +39,7 @@ func TestMain(t *testing.T) {
 
 	os.Args = args
 	go func() {
-		fmt.Println("should be starting main....")
+
 		main()
 		close(waitCh)
 
@@ -53,7 +54,8 @@ func TestMain(t *testing.T) {
 	signalCh := make(chan os.Signal, 1)
 	signal.Notify(signalCh, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGHUP)
 	select {
-	case <-signalCh:
+	case s := <-signalCh:
+		fmt.Printf("RECEIVED SIGNAL: %s\n", s)
 		return
 	case <-waitCh:
 		return

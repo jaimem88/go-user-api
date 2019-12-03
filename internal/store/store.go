@@ -12,6 +12,7 @@ type InMemoryStore struct {
 	users    map[string]*user_pb.User
 }
 
+// New creates a new InMemoryStore instance
 func New() *InMemoryStore {
 	return &InMemoryStore{
 		usersMux: new(sync.RWMutex),

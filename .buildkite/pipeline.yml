@@ -1,0 +1,24 @@
+steps:
+  - label: Build application
+    command: make build
+    agents:
+      queue: 'msp-projects'
+
+  - label: Run Unit tests and E2E tests and report coverage
+    command: make cov-all
+    agents:
+      queue: 'msp-projects'
+  - label: Run golangci-lint
+    command: make lint
+    agents:
+      queue: 'msp-projects'
+  # - label: Run unit tests
+  #   command: make test
+  #   agents:
+  #     queue: 'msp-projects'
+  # - label: Run E2E tests
+  #   command: make test-e2e
+  #   agents:
+  #     queue: 'msp-projects'
+
+  

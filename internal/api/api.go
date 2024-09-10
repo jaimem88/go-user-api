@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	user_pb "github.com/AssemblyPayments/go-user-api/pkg/proto"
+	user_pb "github.com/jaime/go-user-api/pkg/proto"
 )
 
 // Store defines the operations that the API requires to interact with the store to manage users

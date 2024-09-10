@@ -3,7 +3,7 @@ package store
 import (
 	"sync"
 
-	user_pb "github.com/AssemblyPayments/go-user-api/pkg/proto"
+	user_pb "github.com/jaime/go-user-api/pkg/proto"
 )
 
 // InMemoryStore implements the Store interface defined in the API

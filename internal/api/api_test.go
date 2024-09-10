@@ -10,7 +10,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	user_pb "github.com/AssemblyPayments/go-user-api/pkg/proto"
+	user_pb "github.com/jaime/go-user-api/pkg/proto"
 )
 
 func TestAPI_CreateUser(t *testing.T) {

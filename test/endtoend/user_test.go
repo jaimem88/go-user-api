@@ -1,3 +1,4 @@
+//go:build endtoend
 // +build endtoend
 
 package endtoend
@@ -16,7 +17,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	user_pb "github.com/AssemblyPayments/go-user-api/pkg/proto"
+	user_pb "github.com/jaime/go-user-api/pkg/proto"
 )
 
 const defaultGRPCClientTimeout = 5 * time.Second

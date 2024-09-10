@@ -7,10 +7,10 @@ export COMPONENT_ARGS := $(if $(COMPONENT_ARGS),$(COMPONENT_ARGS),)
 export SERVICE_PORT := $(if $(SERVICE_ADDR),$(SERVICE_ADDR),8899)
 export SERVICE_ADDR := $(if $(SERVICE_ADDR),$(SERVICE_ADDR),:$(SERVICE_PORT))
 
-export GOLANG_IMAGE :=devlube/gobuilder:0.0.36-msp-go-1.13.4-alpine3.10
+export GOLANG_IMAGE :=golang:1.22
 export GOLANG_LINTER_IMAGE :=golangci/golangci-lint:v1.21.0
 
-export GOFLAGS:=-mod=vendor
+export GOFLAGS:=-buildvcs=false
 export E2E_TESTS_BIN := $(COMPONENT_NAME)_e2e_tests
 .PHONY: proto
 proto:

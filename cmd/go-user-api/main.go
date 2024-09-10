@@ -17,10 +17,10 @@ import (
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/reflection"
 
-	"github.com/AssemblyPayments/go-user-api/internal/api"
-	"github.com/AssemblyPayments/go-user-api/internal/env"
-	"github.com/AssemblyPayments/go-user-api/internal/store"
-	user_pb "github.com/AssemblyPayments/go-user-api/pkg/proto"
+	"github.com/jaime/go-user-api/internal/api"
+	"github.com/jaime/go-user-api/internal/env"
+	"github.com/jaime/go-user-api/internal/store"
+	user_pb "github.com/jaime/go-user-api/pkg/proto"
 )
 
 const (
